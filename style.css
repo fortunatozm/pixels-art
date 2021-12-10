@@ -47,12 +47,12 @@
 
 }
 
-/*#pixel-board{
+#pixel-board{
 
-  width: 205px;
+  width: 210px;
   height: 205px;
 
-}*/
+}
 
 .pixel{
 
@@ -62,7 +62,8 @@
   border: solid black 1px;
 }
 
-/*.selected{
+.selected:hover{
 
+  background-color: red;
 
-}*/
+}

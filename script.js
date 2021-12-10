@@ -10,7 +10,7 @@ for (let l = 0; l < line; l++) {
   let divElement = document.createElement('div');
   divElement.className = "pixel";
 
-  if ( divElement.style.backgroundColor == 'white' ){
+  if ( divElement.style.backgroundColor === 'white' ){
 
     pixelBoard.appendChild(divElement); 
 

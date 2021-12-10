@@ -47,12 +47,12 @@
 
 }
 
-#pixel-board{
+/*#pixel-board{
 
   width: 205px;
   height: 205px;
 
-}
+}*/
 
 .pixel{
 
@@ -61,3 +61,8 @@
   display: inline-block;
   border: solid black 1px;
 }
+
+/*.selected{
+
+
+}*/

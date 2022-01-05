@@ -16,7 +16,7 @@ for (let l = 0; l < line; l++) {
 
   } else{
 
-    divElement.style.backgroundColor = 'white';
+    divElement.classList.add("pixel-background");
     pixelBoard.appendChild(divElement); 
   }
  
@@ -67,8 +67,6 @@ function addic(origem) {
     }
   }
 
- 
-
   let dest = origem.target;
   dest.classList.add("selected");
   // console.log("Aqui");
@@ -81,5 +79,65 @@ selecRed.addEventListener("click", addic);
 selecBlue.addEventListener("click", addic);
 selecGreen.addEventListener("click", addic);
 
+
+let pixels = document.querySelector ("#pixel-board");
+
+function pixelsAdd(pixelOrigen) {
+  
+  for (let index = 0; index < selecBlack.classList.length; index++) {  
+
+    if (selecBlack.classList[index] === "selected"){
+
+      let destPixels = pixelOrigen.target;
+      destPixels.classList.remove("pixel-background");
+      destPixels.classList.remove("red");
+      destPixels.classList.remove("blue");
+      destPixels.classList.remove("green");
+      destPixels.classList.add("black");
+    }  
+  }
+
+  for (let index = 0; index < selecRed.classList.length; index++) {
+
+    if (selecRed.classList[index] === "selected") {
+      
+      let destPixels = pixelOrigen.target;
+      destPixels.classList.remove("pixel-background");
+      destPixels.classList.remove("black");
+      destPixels.classList.remove("blue");
+      destPixels.classList.remove("green");
+      destPixels.classList.add("red");
+    }
+  }
+
+  for (let index = 0; index < selecGreen.classList.length; index++) {
+
+    if (selecGreen.classList[index] === "selected") {
+
+      let destPixels = pixelOrigen.target;
+      destPixels.classList.remove("pixel-background");
+      destPixels.classList.remove("black");
+      destPixels.classList.remove("blue");
+      destPixels.classList.remove("red");
+      destPixels.classList.add("green");   
+    }
+  }
+
+  for (let index = 0; index < selecBlue.classList.length; index++) {  
+
+    if (selecBlue.classList[index] === "selected") {
+
+      let destPixels = pixelOrigen.target;
+      destPixels.classList.remove("pixel-background");
+      destPixels.classList.remove("black");
+      destPixels.classList.remove("green");
+      destPixels.classList.remove("red");
+      destPixels.classList.add("blue");  
+    }
+  }
+
+}
+
+pixels.addEventListener("click", pixelsAdd);
 
 

@@ -27,3 +27,59 @@ for (let l = 0; l < line; l++) {
   
 }
 
+let selecBlack = document.querySelector(".black");
+let selecRed = document.querySelector(".red");
+let selecBlue = document.querySelector(".blue");
+let selecGreen = document.querySelector(".green");
+
+
+function addic(origem) {
+
+  for (let index = 0; index < selecBlack.classList.length; index++) {  
+
+    if (selecBlack.classList[index] === "selected"){
+
+      selecBlack.classList.remove("selected");
+    }  
+  }
+
+  for (let index = 0; index < selecRed.classList.length; index++) {
+
+    if (selecRed.classList[index] === "selected") {
+
+      selecRed.classList.remove("selected");    
+    }
+  }
+
+  for (let index = 0; index < selecGreen.classList.length; index++) {
+
+    if (selecGreen.classList[index] === "selected") {
+
+      selecGreen.classList.remove("selected");    
+    }
+  }
+
+  for (let index = 0; index < selecBlue.classList.length; index++) {  
+
+    if (selecBlue.classList[index] === "selected") {
+
+      selecBlue.classList.remove ("selected");    
+    }
+  }
+
+ 
+
+  let dest = origem.target;
+  dest.classList.add("selected");
+  // console.log("Aqui");
+  // console.log(origem.target);
+  // console.log(origem.type);
+}
+
+selecBlack.addEventListener("click", addic);
+selecRed.addEventListener("click", addic);
+selecBlue.addEventListener("click", addic);
+selecGreen.addEventListener("click", addic);
+
+
+

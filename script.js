@@ -140,4 +140,16 @@ function pixelsAdd(pixelOrigen) {
 
 pixels.addEventListener("click", pixelsAdd);
 
+let button = document.querySelector("#clear-board");
+let pixelsCreated = document.querySelectorAll(".pixel")
 
+function reseted() {
+  
+  for (let index = 0; index < pixelsCreated.length; index++) {
+    
+    pixelsCreated[index].className = "pixel pixel-background";
+    
+  }
+}
+
+button.addEventListener("click", reseted);

@@ -16,8 +16,8 @@ for (let l = 0; l < line; l++) {
 
   } else{
 
-    divElement.classList.add("pixel-background");
-    pixelBoard.appendChild(divElement); 
+    divElement.classList.add('pixel-background');
+    pixelBoard.appendChild(divElement);
   }
  
   }
